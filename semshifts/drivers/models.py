@@ -10,7 +10,7 @@ class Driver(models.Model):
         (2, "Containerbil mit lofoten"),
         (3, "Trekker")
     )
-    eq_type = models.IntegerField(max_length=200, choices=EQ_TYPES)
+    eq_type = models.IntegerField(choices=EQ_TYPES)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)
 
     def __str__(self):

@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'shifts',
     'users',
     'drivers',
-    'companies'
+    'companies',
+    'home',
 ]
 
 CRISPY_TEMPLATE_PACK = "bootstrap4"

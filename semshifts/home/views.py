@@ -1,13 +1,12 @@
 from django.shortcuts import render
 from django.views import View
-from django.views.generic.base import TemplateView
+from django.views.generic.edit import FormView
 from drivers.models import Driver
+from .forms import ShiftFileForm
+from django.urls import reverse
 
 
-class HomeView(TemplateView):
-    template_name = "base.html"
-
-    def get_context_data(self, **kwargs):
-        ctx = super().get_context_data(**kwargs)
-        ctx['drivers'] = Driver.objects.all()
-        return ctx
+class HomeView(FormView):
+    template_name = "home.html"
+    form_class = ShiftFileForm
+    success_url = reverse("home")

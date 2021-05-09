@@ -1,5 +1,5 @@
 from django import forms
-from shifts.models import Shift
+from .models import Shift
 
 
 class CreateShiftForm(forms.Form):

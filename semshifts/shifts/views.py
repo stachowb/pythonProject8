@@ -6,7 +6,7 @@ from .models import Shift
 from .forms import CreateShiftForm
 
 
-class ShiftsList(ListView):
+class ShiftList(ListView):
     model = Shift
     paginate_by = 50
     context_object_name = "shifts"

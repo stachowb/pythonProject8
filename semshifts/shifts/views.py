@@ -1,7 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse, reverse_lazy
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView, DeleteView
 from .models import Shift
 from .forms import CreateShiftForm
 
@@ -21,6 +21,21 @@ class ShiftCreate(SuccessMessageMixin, CreateView):
     success_url = "/shifts/list"
     success_message = "Shift has been created"
 
+
+class ShiftUpdate(SuccessMessageMixin, UpdateView):
+    model = Shift
+    template_name = "shift-add.html"
+    form = CreateShiftForm
+    fields = ['driver', 'clock_in', 'clock_out', 'km_driven']
+    success_url = "/shifts/list"
+    success_message = "Shift has been updated"
+
+
+class ShiftDelete(SuccessMessageMixin, DeleteView):
+    model = Shift
+    template_name = "shift-delete.html"
+    success_url = reverse_lazy("shifts-list")
+    success_message = "Shift has been deleted"
 
 
 

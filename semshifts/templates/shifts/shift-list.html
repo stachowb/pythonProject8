@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% load static %}
 {% block title %}Shift List{% endblock %}
+{% include "messages.html" %}
 {% block content %}
 <table class="table">
     <thead>
@@ -26,8 +27,8 @@
             <td>{{ shift.clock_out }}</td>
             <td>{{ shift.km_driven }}</td>
             <td>
-                <a href=""><img alt="Edit" src="{% static "images/edit.svg" %}"></a>
-                <a href=""><img alt="Delete" src="{% static "images/delete.svg" %}"></a>
+                <a href="/shifts/edit/{{ shift.pk }}"><img alt="Edit" src="{% static "images/edit.svg" %}"></a>
+                <a href="/shifts/delete/{{ shift.pk }}"><img alt="Delete" src="{% static "images/delete.svg" %}"></a>
             </td>
         </tr>
     {% endfor %}

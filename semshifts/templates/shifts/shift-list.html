@@ -13,6 +13,7 @@
         <th scope="col">Clock In</th>
         <th scope="col">Clock Out</th>
         <th scope="col">KM Driven</th>
+        <th scope="col">KM above 200</th>
         <th scope="col">Action</th>
     </tr>
     </thead>
@@ -26,6 +27,7 @@
             <td>{{ shift.clock_in }}</td>
             <td>{{ shift.clock_out }}</td>
             <td>{{ shift.km_driven }}</td>
+            <td>{{ shift.above_200 }}</td>
             <td>
                 <a href="/shifts/edit/{{ shift.pk }}"><img alt="Edit" src="{% static "images/edit.svg" %}"></a>
                 <a href="/shifts/delete/{{ shift.pk }}"><img alt="Delete" src="{% static "images/delete.svg" %}"></a>

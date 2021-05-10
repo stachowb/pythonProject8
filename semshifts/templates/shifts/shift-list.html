@@ -12,6 +12,7 @@
         <th scope="col">EQ Type</th>
         <th scope="col">Clock In</th>
         <th scope="col">Clock Out</th>
+        <th scope="col">Shift Length</th>
         <th scope="col">KM Driven</th>
         <th scope="col">KM above 200</th>
         <th scope="col">Action</th>
@@ -22,10 +23,11 @@
         <tr>
             <td>{{ shift.pk }}</td>
             <td>{{ shift.driver }}</td>
-            <td>{{ shift.company_name }}</td>
-            <td>-</td>
+            <td>{{ shift.driver.company }}</td>
+            <td>{{ shift.driver.get_eq_type_display }}</td>
             <td>{{ shift.clock_in }}</td>
             <td>{{ shift.clock_out }}</td>
+            <td>{{ shift.shift_length }}</td>
             <td>{{ shift.km_driven }}</td>
             <td>{{ shift.above_200 }}</td>
             <td>

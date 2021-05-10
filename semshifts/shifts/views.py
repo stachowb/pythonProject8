@@ -17,7 +17,7 @@ class ShiftCreate(SuccessMessageMixin, CreateView):
     model = Shift
     template_name = "shift-add.html"
     form = CreateShiftForm
-    fields = ['driver', 'clock_in', 'clock_out', 'km_driven']
+    fields = ['driver', 'company', 'clock_in', 'clock_out', 'km_driven']
     success_url = "/shifts/list"
     success_message = "Shift has been created"
 

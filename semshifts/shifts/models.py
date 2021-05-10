@@ -1,11 +1,13 @@
 from django.db import models
 from drivers.models import Driver
+from companies.models import Company
 
 
 class Shift(models.Model):
     driver = models.ForeignKey(Driver, on_delete=models.CASCADE)
-    clock_in = models.CharField(max_length=50)
-    clock_out = models.CharField(max_length=50)
+    company = models.ForeignKey(Company, on_delete=models.CASCADE)
+    clock_in = models.DateTimeField(blank=True)
+    clock_out = models.DateTimeField(blank=True)
     km_driven = models.IntegerField(default=0)
 
     def __str__(self):

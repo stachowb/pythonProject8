@@ -7,8 +7,9 @@ class Driver(models.Model):
 
     EQ_TYPES = (
         (1, "Containerbil"),
-        (2, "Containerbil mit lofoten"),
-        (3, "Trekker")
+        (2, "Containerbil m/løftelem"),
+        (3, "Trekker"),
+        (4, "-")
     )
     eq_type = models.IntegerField(choices=EQ_TYPES)
     company = models.ForeignKey(Company, on_delete=models.CASCADE)

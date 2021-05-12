@@ -66,6 +66,6 @@ def post_save_calc_wages(sender, instance, created, **kwargs):
         instance.shift_length = instance.clock_out - instance.clock_in
         instance.bonus_km = 7 * instance.above_200
         instance.regular_pay = rates[instance.reg_number] * (
-                    instance.shift_length.total_seconds() / 3600) if instance.reg_number in rates else \
-                    rates[instance.driver.get_eq_type_display()] * (instance.shift_length.total_seconds() / 3600)
+            instance.shift_length.total_seconds() / 3600) if instance.reg_number in rates else \
+            rates[instance.driver.get_eq_type_display()] * (instance.shift_length.total_seconds() / 3600)
         instance.save()

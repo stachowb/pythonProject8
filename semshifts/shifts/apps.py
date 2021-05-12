@@ -5,5 +5,5 @@ class ShiftsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
     name = 'shifts'
 
-    def read(self):
+    def ready(self):
         import shifts.signals

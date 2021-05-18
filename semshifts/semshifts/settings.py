@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     # 3rd party apps
     'crispy_forms',
     'rest_framework',
-    'django_extensions'
+    'django_extensions',
     # own apps
     'reports',
     'shifts',

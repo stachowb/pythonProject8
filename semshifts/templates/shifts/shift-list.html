@@ -31,8 +31,8 @@
             <td>{{ shift.km_driven }}</td>
             <td>{{ shift.above_200 }}</td>
             <td>
-                <a href="/shifts/edit/{{ shift.pk }}"><img alt="Edit" src="{% static "images/edit.svg" %}"></a>
-                <a href="/shifts/delete/{{ shift.pk }}"><img alt="Delete" src="{% static "images/delete.svg" %}"></a>
+                <a href="{% url "shifts-edit" shift.slug %}"><img alt="Edit" src="{% static "images/edit.svg" %}"></a>
+                <a href="{% url "shifts-delete" shift.slug %}"><img alt="Delete" src="{% static "images/delete.svg" %}"></a>
             </td>
         </tr>
     {% endfor %}

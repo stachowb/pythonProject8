@@ -5,7 +5,7 @@ from .models import Shift
 class CreateShiftForm(forms.ModelForm):
     class Meta:
         model = Shift
-        fields = ['driver', 'company', 'clock_in', 'clock_out', 'km_driven']
+        fields = ['company', 'driver', 'clock_in', 'clock_out', 'km_driven']
 
         widgets = {
             "driver": forms.TextInput(attrs={"class": "form-control"}),

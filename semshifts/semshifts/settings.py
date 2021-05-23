@@ -41,8 +41,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     # 3rd party apps
     'crispy_forms',
-    'rest_framework',
-    'django_extensions',
     # own apps
     'reports',
     'shifts',
@@ -96,7 +94,8 @@ DATABASES = {
         'NAME': "shifts",
         'USER': "postgres",
         "PASSWORD": "bartek93",
-        "HOST": "localhost"
+        "HOST": "localhost",
+        "PORT": "5433"
     }
 }
 

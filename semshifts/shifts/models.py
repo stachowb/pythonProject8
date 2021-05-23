@@ -4,6 +4,7 @@ from django.utils.text import slugify
 from drivers.models import Driver
 from companies.models import Company
 
+
 class Shift(models.Model):
     driver = models.ForeignKey(Driver, on_delete=models.CASCADE)
     reg_number = models.CharField(max_length=10)

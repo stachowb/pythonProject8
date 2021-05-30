@@ -16,8 +16,8 @@ class ShiftList(ListView):
 class ShiftCreate(SuccessMessageMixin, CreateView):
     model = Shift
     template_name = "shift-add.html"
-    form = CreateShiftForm
-    fields = ['company', 'driver', 'clock_in', 'clock_out', 'km_driven']
+    form_class = CreateShiftForm
+    # fields = ['company', 'driver', 'clock_in', 'clock_out', 'km_driven']
     success_message = "Shift has been created"
 
 
@@ -25,7 +25,7 @@ class ShiftUpdate(SuccessMessageMixin, UpdateView):
     model = Shift
     template_name = "shift-add.html"
     form = CreateShiftForm
-    fields = ['driver', 'clock_in', 'clock_out', 'km_driven']
+    # fields = ['driver', 'clock_in', 'clock_out', 'km_driven']
     success_message = "Shift has been updated"
 
 
